@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Starter Blog",
-    author: "Kyle Mathews",
+    title: "现代前端开发",
+    author: "程序员Xiaoxiong",
   },
   plugins: [
     `gatsby-plugin-styled-components`,

@@ -1,0 +1,52 @@
+{
+  "assetsByChunkName": {
+    "path---self-imporve": [
+      "path---self-imporve-d4df17992a819891ceda.js",
+      "path---self-imporve-d4df17992a819891ceda.js.map"
+    ],
+    "component---src-pages-index-js": [
+      "component---src-pages-index-js-794bdd937804c9b6304a.js",
+      "component---src-pages-index-js-794bdd937804c9b6304a.js.map"
+    ],
+    "path---": [
+      "path----dcacbe27330c48f0c7cf.js",
+      "path----dcacbe27330c48f0c7cf.js.map"
+    ],
+    "path---modern-front-end-development": [
+      "path---modern-front-end-development-35afeeee15a0d93a7d9b.js",
+      "path---modern-front-end-development-35afeeee15a0d93a7d9b.js.map"
+    ],
+    "component---node-modules-gatsby-plugin-offline-app-shell-js": [
+      "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js",
+      "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
+    ],
+    "component---src-templates-blog-post-js": [
+      "component---src-templates-blog-post-js-f6520ddb52c8b27c439e.js",
+      "component---src-templates-blog-post-js-f6520ddb52c8b27c439e.js.map"
+    ],
+    "component---src-layouts-index-js": [
+      "component---src-layouts-index-js-d49b12810c9e313fc984.js",
+      "component---src-layouts-index-js-d49b12810c9e313fc984.js.map"
+    ],
+    "path---understand-closure": [
+      "path---understand-closure-bc9696045685e46b6bb0.js",
+      "path---understand-closure-bc9696045685e46b6bb0.js.map"
+    ],
+    "path---index": [
+      "path---index-94cef14407d22b84004f.js",
+      "path---index-94cef14407d22b84004f.js.map"
+    ],
+    "commons": [
+      "commons-f1ef510847f79fa0a799.js",
+      "commons-f1ef510847f79fa0a799.js.map"
+    ],
+    "path---offline-plugin-app-shell-fallback": [
+      "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
+      "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "app": [
+      "app-1655b1f0604b8bd9c253.js",
+      "app-1655b1f0604b8bd9c253.js.map"
+    ]
+  }
+}

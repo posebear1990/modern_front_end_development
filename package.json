@@ -27,9 +27,11 @@
     "gatsby-transformer-sharp": "^1.6.1",
     "lodash": "^4.15.0",
     "styled-components": "^2.3.3",
-    "typography-theme-github": "^0.15.10"
+    "typography-theme-github": "^0.15.10",
+    "webpack": "^1.9.11"
   },
   "devDependencies": {
+    "file-loader": "^1.1.6",
     "gh-pages": "^0.12.0",
     "prettier": "^1.6.1"
   },

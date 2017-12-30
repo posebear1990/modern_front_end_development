@@ -89,7 +89,7 @@ React 的代码段。
 
 Jsx 的自动补全。
 
-[linter-eslint](https://atom.io/packages/linter-eslint)
+###[linter-eslint](https://atom.io/packages/linter-eslint)
 
 代码检查工具。
 

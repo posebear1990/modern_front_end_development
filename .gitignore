@@ -4,3 +4,4 @@ node_modules/
 .intermediate-representation/
 .cache/
 yarn.lock
+.history

@@ -17,9 +17,9 @@ class BlogIndex extends React.Component {
             const title = get(post, "node.frontmatter.title") || post.node.path;
 
             return (
-              <div key={post.node.frontmatter.path}>
+              <div key={post.node.fields.slug}>
                 <h3>
-                  <Link to={post.node.frontmatter.path}>{title}</Link>
+                  <Link to={post.node.fields.slug}>{title}</Link>
                 </h3>
                 <small>{post.node.frontmatter.date}</small>
                 <p dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
@@ -42,19 +42,58 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/post/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       edges {
         node {
           excerpt(format: PLAIN, pruneLength: 200, truncate: true)
           frontmatter {
-            path
             date(formatString: "DD MMMM, YYYY")
-          }
-          frontmatter {
             title
+          }
+          fields {
+            slug
           }
         }
       }
     }
   }
 `;
+
+// {
+//   site {
+//     siteMetadata {
+//       title
+//     }
+//   }
+//   post: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/post/"}}, sort: {fields: frontmatter___date, order: DESC}) {
+//     edges {
+//       node {
+//         excerpt(pruneLength: 250)
+//         frontmatter {
+//           path
+//           date(formatString: "DD MMMM, YYYY")
+//         }
+//         frontmatter {
+//           title
+//         }
+//       }
+//     }
+//   }
+//   daily: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/daily/"}}, sort: {fields: frontmatter___date, order: DESC}) {
+//     edges {
+//       node {
+//         excerpt(pruneLength: 250)
+//         frontmatter {
+//           path
+//           date(formatString: "DD MMMM, YYYY")
+//         }
+//         frontmatter {
+//           title
+//         }
+//       }
+//     }
+//   }
+// }

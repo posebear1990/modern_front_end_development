@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, StaticQuery, graphql } from "gatsby";
+import Navbar from "./NavBar";
 import styled from "styled-components";
 
 const Title = styled.h1`
@@ -20,6 +21,7 @@ const Title = styled.h1`
 `;
 
 const Wrapper = styled.div`
+  position: relative;
   margin: 0 auto;
   max-width: 900px;
   width: 90%;
@@ -47,7 +49,11 @@ export default ({ children }) => (
         <Title>
           <Link to={"/"}>{data && data.site.siteMetadata.title}</Link>
         </Title>
-        <Wrapper>{children}</Wrapper>
+
+        <Wrapper>
+          <Navbar />
+          {children}
+        </Wrapper>
       </div>
     )}
   />

@@ -12,13 +12,14 @@ const Nav = styled.nav`
     margin-bottom: 10px;
     background: #00a0ad;
     border-radius: 0 3px 3px 0;
-    padding: 10px 10px;
     cursor: pointer;
 
     :hover {
       background: #10787c;
     }
     a {
+      display: inline-block;
+      padding: 10px 10px;
       color: #fff;
       font-weight: 700;
       :hover {

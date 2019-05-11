@@ -63,7 +63,8 @@
     "new-post": "node tools/new-post.js --post",
     "new-daily": "node tools/new-post.js --daily",
     "build": "gatsby build --prefix-paths",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "gh-pages": "gh-pages -d public",
+    "deploy": "gatsby build --prefix-paths && bash tools/deploy.sh",
     "fix-semi":
       "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   }

@@ -133,6 +133,8 @@ fetch("/test-url")
 
 真实项目里，我们需要做的其实是结合业务，对 fetch 方法进行封装。
 
+最后，所有的回调函数模式的异步调用都可以改写成 Promise 的形式，但是并不是所有的事件模式的异步都可以改写成 Promise 的形式，因为很多事件例如 click 事件会不断触发，但是 Promise 对象只能 resove 一次。
+
 ## async await
 
 Promise 解决了以往的异步操作所有痛点， async await 则更进一步，它通过 Generator 与 Promise 为异步操作提供了一个语法糖，从而使代码看上去更像同步代码。

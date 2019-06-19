@@ -164,6 +164,30 @@ async 相比于 Promise 虽然只是一个语法糖，让异步的操作可以�
 
 另外 async await 语法并非替代 Promise 的存在，一些复杂的异步关系还得用到 Promise.all Promise.race 等方法。
 
+### 用 promise 封装一个 sleep
+
+JavaScript 不向其他语言一样，有原生的 sleep 方法，但是通过 promise，我们可以很容易封装一个：
+
+```javascript
+function sleep(time) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve();
+    }, time);
+  });
+}
+```
+
+这样通过 async await 语法进行调用，看上去就像 sleep 方法一样，当然因为是用 setTimeout 实现，所以 sleep 的时间 time 未必严格等于输入。
+
+```javascript
+async function testCase() {
+  await sleep(20000);
+
+  console.log("这是两秒后输出的一句话");
+}
+```
+
 ## 总结
 
 本文以封装一个简单的网络请求方法为例，回顾了 JavaScript 的异步处理方式的演进过程。

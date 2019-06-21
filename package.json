@@ -1,11 +1,8 @@
 {
-  "name": "gatsby-starter-blog-no-styles",
+  "name": "modern_front_end_development",
   "description": "xiaoxiong's tech blog",
   "version": "1.0.0",
-  "author": "Noah Glusenkamp <noah.glusenkamp@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
-  },
+  "author": "Xiaoxiong <posebear1990@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.7.1",
@@ -45,19 +42,19 @@
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2"
   },
-  "homepage": "https://github.com/noahg/gatsby-starter-blog-no-styles#readme",
+  "homepage": "https://blog.xiaoxiaoxiaoxiong.com",
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
+  "license": "Apache-2.0",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/noahg/gatsby-starter-blog-no-styles.git"
+    "url": "git+https://github.com/posebear1990/modern_front_end_development.git"
   },
   "scripts": {
     "dev": "gatsby develop",
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "develop": "gatsby develop",
@@ -67,5 +64,8 @@
     "gh-pages": "gh-pages -d public",
     "deploy": "gatsby build --prefix-paths && bash tools/deploy.sh",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
+  },
+  "bugs": {
+    "url": "https://github.com/posebear1990/modern_front_end_development/issues"
   }
 }

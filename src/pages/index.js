@@ -61,39 +61,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-// {
-//   site {
-//     siteMetadata {
-//       title
-//     }
-//   }
-//   post: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/post/"}}, sort: {fields: frontmatter___date, order: DESC}) {
-//     edges {
-//       node {
-//         excerpt(pruneLength: 250)
-//         frontmatter {
-//           path
-//           date(formatString: "DD MMMM, YYYY")
-//         }
-//         frontmatter {
-//           title
-//         }
-//       }
-//     }
-//   }
-//   daily: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/daily/"}}, sort: {fields: frontmatter___date, order: DESC}) {
-//     edges {
-//       node {
-//         excerpt(pruneLength: 250)
-//         frontmatter {
-//           path
-//           date(formatString: "DD MMMM, YYYY")
-//         }
-//         frontmatter {
-//           title
-//         }
-//       }
-//     }
-//   }
-// }

@@ -1,0 +1,11 @@
+.react-simple-component-calendar-container {
+  max-width: 500px;
+  min-width: 300px;
+
+  margin: 0 auto;
+}
+
+.react-simple-component-calendar-table .active button {
+  background: #00a0ad !important;
+  color: #fff;
+}

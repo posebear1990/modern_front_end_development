@@ -1,35 +1,44 @@
-import React from "react";
-import { Link, graphql } from "gatsby";
+import React, { useState } from "react";
+import { graphql } from "gatsby";
 import get from "lodash/get";
 import Helmet from "react-helmet";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
+import Nav from "../components/Nav";
+import Calendar from "../components/Calendar";
+import List from "../components/List";
 
-class Daily extends React.Component {
-  render() {
-    const siteTitle = get(this, "props.data.site.siteMetadata.title");
-    const dailys = get(this, "props.data.allMarkdownRemark.edges") || [];
+function Daily(props) {
+  const [viewType, setViewType] = useState("calendar");
 
-    return (
-      <Layout>
-        <Helmet title={siteTitle} />
-        {dailys.map(post => {
-          if (post.node.path !== "/404/") {
-            const title = get(post, "node.frontmatter.title");
-            return (
-              <div key={post.node.fields.slug}>
-                <h3>
-                  <Link to={post.node.fields.slug}>{title}</Link>
-                </h3>
-                <small>{post.node.frontmatter.date}</small>
-                <p dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
-              </div>
-            );
+  const siteTitle = get(props, "data.site.siteMetadata.title");
+  const dailys = get(props, "data.allMarkdownRemark.edges") || [];
+
+  console.log(viewType);
+
+  return (
+    <Layout>
+      <Helmet title={siteTitle} />
+      <Nav
+        data={[
+          {
+            label: "日历视图",
+            key: "calendar"
+          },
+          {
+            label: "列表视图",
+            key: "list"
           }
-          return null;
-        })}
-      </Layout>
-    );
-  }
+        ]}
+        onClick={setViewType}
+      />
+
+      {viewType === "calendar" ? (
+        <Calendar data={dailys} />
+      ) : (
+        <List data={dailys} />
+      )}
+    </Layout>
+  );
 }
 
 export default Daily;
